@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 입력</title>
+    <script>
+        function showNumber() {
+            var inputValue = document.getElementById('number-input').value;
+            document.getElementById('output').innerText = "선택한 번호 : " + inputValue;
+        }
+    </script>
+</head>
+<body>
+    <h1>숫자 입력</h1>
+    <div>
+        <input type="number" id="number-input" value="" />
+        <button id="btn-ok" onclick="showNumber()">OK</button>
+    </div>
+    <p id="output">선택한 번호 : </p>
+</body>
+</html>

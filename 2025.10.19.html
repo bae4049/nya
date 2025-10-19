@@ -4,3 +4,122 @@ git config user.email wnsdnjs4049@naver.com
 git config user.name bae4049
 커밋 (...)
 동기화
+
+계산기 <day03-01>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input id="inp-num1" /> <innput id="inp-num2"/> = <input id="inp-out"/>
+    </div>
+    <div>
+        <button id="btn-plus"> submit </button>
+    </div> 
+    
+    <script>
+        var inpNum1 = document.getElementByid("inp-num1")
+        var inpNum2 = document.getElementByid("inp-num2")
+        var inOut = document.getElenmentByid("inp-out")
+        var btnPlus = document.getElementByid("btn-plus")
+
+        btnPlus.addEventListener('Click',()=> {
+
+            var num1 = parseInt(inpNum1.value)
+            var num2 = parseInt(inpNum2.value)
+
+            console.log(num1+num2)
+
+            inpOut.value = num1+num2
+            
+
+        })
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>
+
+기차역 <day05-02>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>가고 싶은 도시를 선택</h1>
+<div>
+  <select id="sel-city">
+    <option value="서울">서울</option>
+    <option value="부산">부산</option>
+    <option value="전주" selected> 전주</option>
+    <option value="광주">광주</option>
+    <option value="광명">광명</option>
+  </select>
+</div>
+<p id="txt-result"></p>
+<button id="btn-select">선택</button>
+
+<script>
+  var selCity = document.getElementById("sel-city");
+  var txtResult = document.getElementById("txt-result");
+  var btnSelect = document.getElementById("btn-select");
+
+
+ btnSelect.addEventListener('click', function() {
+    console.log(selCity.value)
+    txtResult.innerText = selCity.value + "행 열차를 선택"
+ })
+
+</script>
+
+
+    </div>
+</body>
+</html>
+
+카운터 <day02-01>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id= "counter-output" >counter : 0</h1>
+    <button id="bae-inc" > Inc </button>
+    <button id="bae-dec" > Dec </button>
+
+
+    <script>
+        var counterOutput = document.getElementById("counter-output")
+        var baeInc= document.getElementById("bae-inc");
+        var counter = 0 //변수 선언
+        var baeDec = document.getElementById("bae-dec");
+
+        baeInc.addEventListener('click', ()=> {
+           console.log('click test' + counter)
+           counter = counter + 1
+           counterOutput.innerText = "counter : " + counter
+        })
+
+        baeDec.addEventListener('click', () => {
+            console.log('click test' + counter)
+            counter = counter - 1
+            counterOutput.innerText = "counter : " + counter;
+        });
+    </script>
+
+
+</body>
+</html>

@@ -23,9 +23,17 @@
     .anim-type-1 {
         animation-name: move;
         animation-duration: 3s;
-        animation-iteration-count: alternate;
+        animation-iteration-count: 2;
+        /* animation-direction: alternate; */
+        /* animation-direction: alternate-reverse; */
         animation-direction: alternate;
         animation-fill-mode: forwards;
+    }
+    .anim-type-2 {
+        animation-timing-function: linear;
+    }
+    .anim-type-2 {
+        animation-timing-function: cubic-bezier(0,1,.24,.63);
     }
 
     @keyframes move {
@@ -34,9 +42,8 @@
     }
 </style>
 <body>
-    <div class="box anim-type-1">
-
-    </div>
-    
+    <div class="box anim-type-1"></div>
+    <div class="box anim-type-1 anim type-2"></div>
+    <div class="box anim-type-1 anim type-3"></div>    
 </body>
 </html>

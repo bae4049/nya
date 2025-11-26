@@ -7,6 +7,8 @@ export default async function main() {
     const creditScreen = document.querySelector('#credit-screen')
     let currentScreen = "mainMenu"
 
+    const optionScreen = document.querySelector('#option-screen');  
+
     
     let currentIndex = 0;
     const menuitems = document.querySelectorAll(".menu-item");
@@ -41,7 +43,12 @@ export default async function main() {
                     creditScreen.classList.remove('hide')
                     currentScreen = "creditScreen"
                 }
+                else if(select_action == 'option') {
+                    mainMenu.classList.add('hide');
+                    optionScreen.classList.remove('hide');
+                    currentScreen = "optionScreen";
             }
+        }
 
             console.log(currentIndex)
             menuitems[currentIndex].classList.add('select')
@@ -59,12 +66,16 @@ export default async function main() {
                 currentScreen = "mainMenu"
             }
         }
+        else if(currentScreen == "optionScreen") {  // 옵션 화면에서 Back 버튼 처리
+            console.log('option screen');
+            if(e.key == "Enter") {
+                optionScreen.classList.add('hide');
+                mainMenu.classList.remove('hide');
+                currentScreen = "mainMenu";
 
-        
+              
 
-    })
-
-    
-
-
+    }
+}
+    });
 }

@@ -56,3 +56,23 @@ main {
 .hide {
     display: none;
 }
+
+.option-title {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.option-item {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.back-button {
+    font-size: 24px;
+    color: lightgray;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    color: white;
+}

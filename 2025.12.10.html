@@ -1,0 +1,81 @@
+1. Git 에 대해서 아는 대로 설명하시오
+Git은 버전 관리 시스템(Version Control System) 으로, 코드의 변경 내역을 저장하고 여러 개발자가 함께 협업할 수 있게 해주는 도구이다.
+과거 버전으로 되돌리거나, 새 기능을 만들기 위해 분기(브랜치)를 나눠서 개발할 수 있다.
+checkout : 특정 브랜치나 커밋으로 이동하는 명령
+commit : 작업한 내용을 저장(스냅샷 생성)
+push : 로컬 저장소의 commit을 GitHub 같은 원격 저장소로 업로드
+pull : 원격 저장소의 변경 내용을 내 로컬로 가져오는 것
+
+2. Git branch 에 대해서 설명하시오
+브랜치(branch) 는
+개발을 독립된 영역에서 진행할 수 있게 하는 기능
+하나의 프로젝트 안에서 여러 명이 동시에 다른 기능을 개발할 때 사용된다.
+
+장점 : 메인 코드에 영향을 주지 않고 실험 가능
+여러 작업을 병렬로 수행 가능
+개발이 끝나면 merge하여 하나로 합침
+
+3. Git 의 Pull Request(PR) 에 대해서 설명하시오
+내가 만든 브랜치의 변경사항을 다른 브랜치(main 등)에 합쳐달라고 요청하는 절차
+직접 merge하지 않고, 팀원이 코드 리뷰 후 승인하면 병합됨
+ 
+용도 : 협업 시 코드 리뷰 / 버그 방지 / 변경내역 기록 및 관리 / 팀 전체가 안전하게 기능을 추가할 수 있음
+
+4. GitHub Pages 만드는 법을 설명하시오
+GitHub 저장소 생성
+index.html 파일 업로드
+GitHub에서 Settings → Pages → Deploy from branch 선택
+Branch: main, 폴더: /root 선택 (이부분은 수정 못함 나도 머라말해야할지 모르겠음)
+Save → 제공된 URL로 접속
+
+6. Flex 에 대해서 최대한 상세하게 설명하세요
+
+가로/세로 정렬을 매우 쉽게 하는 1차원 레이아웃 방식.
+
+Flex 주요 속성 (Container)
+1) flex-direction
+주축 방향 지정
+row(가로) / column(세로)
+2) justify-content
+주축 방향 정렬
+center, space-between, space-around, flex-end 등
+3) align-items
+교차축 방향 정렬
+center, flex-start, flex-end, stretch
+4) flex-wrap
+아이템 줄 바꿈 여부
+nowrap(기본), wrap
+
+Flex Item 속성
+flex-grow
+남는 공간을 아이템이 얼마나 차지할지 비율을 지정
+flex-shrink
+공간이 부족할 때 줄어드는 비율
+flex-basis
+기본 크기(초기 너비/높이)
+order
+아이템 순서 변경
+
+Flex의 특징
+레이아웃을 부드럽게 만들고 반응형 디자인에 유리함
+
+7. CSS, HTML, JS 의 관계를 설명하시오
+ 
+HTML(구조)
+
+페이지의 뼈대(구조)
+텍스트, 이미지, 버튼 등 요소 배치
+
+CSS(디자인)
+
+HTML을 꾸며주는 스타일
+색, 폰트, 배치, 크기 등을 담당
+
+JavaScript(동작)
+
+웹페이지의 동적인 기능
+버튼 클릭 시 이벤트, 팝업, 데이터 처리
+
+HTML = 구조물
+CSS = 디자인
+JavaScript = 동작/기능
